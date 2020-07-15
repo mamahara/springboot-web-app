@@ -11,9 +11,7 @@ pipeline {
     stages {
         
         stage('Build App') {
-            when {
-                expression { quitPipeline == false }
-            }
+            
             steps {
                 script {
                     
@@ -27,8 +25,6 @@ pipeline {
     }
     }	//end Stages
     post {
-        cleanup {
-            workspaceCleanup(WORKSPACE)
-        }
+        
     }
 }
