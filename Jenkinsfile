@@ -28,11 +28,11 @@ pipeline {
                 }
             }
             
-    } //end Stages
+    }
+    }	//end Stages
     post {
         cleanup {
             workspaceCleanup(WORKSPACE)
         }
     }
 }
-
