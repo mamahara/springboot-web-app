@@ -24,7 +24,5 @@ pipeline {
             
     }
     }	//end Stages
-    post {
-        
-    }
+    
 }
