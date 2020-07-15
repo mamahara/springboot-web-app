@@ -7,11 +7,7 @@ pipeline {
         skipStagesAfterUnstable()
         buildDiscarder(logRotator(numToKeepStr: '5'))
     }
-    environment {
-        //User Provided
-        //Build & Nexus Related
-        
-    }
+  
     stages {
         
         stage('Build App') {
