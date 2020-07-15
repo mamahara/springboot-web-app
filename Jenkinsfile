@@ -1,9 +1,8 @@
 def releaseVersion, releaseTicket, branchToCheckout, uploadFlag
 
 pipeline {
-    agent {
-        any
-    }
+    agent any
+    
     options {
         skipStagesAfterUnstable()
         buildDiscarder(logRotator(numToKeepStr: '5'))
