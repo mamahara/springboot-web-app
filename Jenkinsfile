@@ -9,6 +9,13 @@ pipeline {
         buildFileAPI = 'springboot-web-app-1.0-SNAPSHOT.jar'
         nexusArtifactTypeAPI = 'jar'
         artifactApp = 'springboot-web-app'
+        
+        //System Provided
+        deploymentRepoName = 'springboot-web-app'
+        deploymentRepoAddress = 'springboot-web-app'
+        projectName = "springboot-web-app"
+        branchName = BRANCH_NAME.toLowerCase()
+        quitPipeline = false
 
       }
     
