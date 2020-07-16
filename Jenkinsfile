@@ -29,6 +29,7 @@ pipeline {
                     echo "branchName:${branchName}, tagName:${tagName}"
 
                     abortPreviousRunningBuilds()
+					}
                     
             }
         }
