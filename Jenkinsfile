@@ -29,8 +29,7 @@ pipeline {
                     echo "branchName:${branchName}, tagName:${tagName}"
 
                     abortPreviousRunningBuilds()
-                    (releaseTicket, releaseVersion) = common.getCommitMessageLinux()
-                    }
+                    
             }
         }
         stage('Build') {
