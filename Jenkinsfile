@@ -35,8 +35,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                script {
+                    configFileProvider([configFile('2a481c2c-399f-4234-83ff-30ff1e74e32a')]) {
+                        sh '''
+                            mvn clean install
+                        '''
+                    }
+                }
             }
+	    
         }
         stage('Test') {
             steps {
