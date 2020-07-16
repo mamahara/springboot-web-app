@@ -1,28 +1,21 @@
-def releaseVersion, releaseTicket, branchToCheckout, uploadFlag
-
 pipeline {
     agent any
-    
-    options {
-        skipStagesAfterUnstable()
-        buildDiscarder(logRotator(numToKeepStr: '5'))
-    }
-  
+
     stages {
-        
-        stage('Build App') {
-            
+        stage('Build') {
             steps {
-                script {
-                    
-                        sh '''
-                            mvn clean install
-                        '''
-                    
-                }
+                echo 'Building..'
             }
-            
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-    }	//end Stages
-    
 }
