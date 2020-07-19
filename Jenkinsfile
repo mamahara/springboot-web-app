@@ -1,10 +1,6 @@
 pipeline {
     agent any
     
-    tools {
-        maven 'maven_home'
-    }
-    
     environment {
         //User Provided
         //Build & Nexus Related
