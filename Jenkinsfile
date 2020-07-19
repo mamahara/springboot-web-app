@@ -38,7 +38,7 @@ pipeline {
                 script {
                     
                         sh '''
-                            sh mvn clean install
+                            mvn clean install
                         '''
                     
                 }
