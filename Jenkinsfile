@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    tools {
+        maven 'Maven 3.2.5'
+    }
+    
     environment {
         //User Provided
         //Build & Nexus Related
