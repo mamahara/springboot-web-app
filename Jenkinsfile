@@ -38,7 +38,7 @@ pipeline {
                 script {
                     configFileProvider([configFile('2a481c2c-399f-4234-83ff-30ff1e74e32a')]) {
                         sh '''
-                            sh "${mvnHome}/bin/mvn clean install
+                            sh "${mvnHome}/bin/mvn clean install"
                         '''
                     }
                 }
