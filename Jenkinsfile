@@ -1,6 +1,11 @@
 pipeline {
     agent any
     
+    tools { 
+        maven 'maven' 
+        jdk 'jdk8' 
+    }
+    
     environment {
         //User Provided
         //Build & Nexus Related
