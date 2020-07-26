@@ -10,7 +10,7 @@ pipeline {
         //User Provided
         //Build & Nexus Related
         nexusGroupFolder = 'com.learning.springboot-web-app'
-        buildDirectoryAPI = './springboot-web-app/target/'
+        buildDirectoryAPI = '/var/lib/jenkins/jobs/springboot-web-app/branches/master/workspace/target'
         buildFileAPI = 'springboot-web-app-1.0-SNAPSHOT.jar'
         nexusArtifactTypeAPI = 'jar'
         artifactApp = 'springboot-web-app'
