@@ -40,8 +40,8 @@ pipeline {
                     nexusArtifactURL = "http://nexus3-my-openshift-learning.apps-crc.testing"
                     nexusLink = "http://nexus3-my-openshift-learning.apps-crc.testing/" + "maven-releases/com/learning/${nexusArtifactId}/springboot-web-app/${nexusArtifactId}-${artifactApp}.jar"
 
-                    echo "nexusArtifactURL:${nexusArtifactURL}, branchToCheckout:${branchToCheckout}, tagName:${tagName}, quitPipeline:${quitPipeline}"
-                    echo "nexusArtifactId:${nexusArtifactId}, uploadFlag: ${uploadFlag}, nexusLink:${nexusLink}"
+                    echo "nexusArtifactURL:${nexusArtifactURL}, tagName:${tagName}"
+                    echo "nexusArtifactId:${nexusArtifactId}, nexusLink:${nexusLink}"
 		  }
                     
             }
