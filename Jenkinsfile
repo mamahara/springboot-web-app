@@ -58,6 +58,18 @@ pipeline {
             }
 	    
         }
+	stage('Publish Artifacts') {
+            
+            steps {
+                script {
+                    dir("${buildDirectoryAPI}") {
+                        sh 'ls -lahr'
+                        nexusUploader(nexusArtifactId, buildFileAPI, nexusArtifactTypeAPI, nexusGroupFolder, 'maven-releases', artifactApp)
+                    }
+                    
+                }
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
