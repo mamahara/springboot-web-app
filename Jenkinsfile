@@ -34,7 +34,15 @@ pipeline {
                     echo "branchName:${branchName}, tagName:${tagName}"
 
                     abortPreviousRunningBuilds()
-					}
+		    versionNo = 1.01
+                    buildNo = 100
+                    nexusArtifactId = "master" + '-' + versionNo + '-' + buildNo
+                    nexusArtifactURL = "http://nexus3-my-openshift-learning.apps-crc.testing"
+                    nexusLink = "http://nexus3-my-openshift-learning.apps-crc.testing/" + "maven-releases/com/emaratech/noqodi/ded-voucher/${nexusArtifactId}/"springboot-web-app"/${nexusArtifactId}-${artifactApp}.jar"
+
+                    echo "nexusArtifactURL:${nexusArtifactURL}, branchToCheckout:${branchToCheckout}, tagName:${tagName}, quitPipeline:${quitPipeline}"
+                    echo "nexusArtifactId:${nexusArtifactId}, uploadFlag: ${uploadFlag}, nexusLink:${nexusLink}"
+		  }
                     
             }
         }
